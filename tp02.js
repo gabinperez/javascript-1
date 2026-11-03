@@ -21,3 +21,7 @@ console.log("b1 && b2 :", b1 && b2);
 console.log("b1 || b2 :", b1 || b2);   
 console.log("!b1 :", !b1);             
 console.log("!b2 :", !b2);             
+
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
+}
