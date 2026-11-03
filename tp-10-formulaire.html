@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des utilisateurs</title>
+  <link rel="stylesheet" href="tp-10-formulaire.css">
+</head>
+<body>
+  <h1>Gestion des utilisateurs</h1>
+
+  <button id="btnAjouter">+ Ajouter</button>
+
+  <table id="tableUtilisateurs">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Date de naissance</th>
+        <th>Lieu de naissance</th>
+        <th>Adresse</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="corpsTableau">
+      <!-- rempli dynamiquement en JS -->
+    </tbody>
+  </table>
+
+  <!-- Modale formulaire (cachée par défaut) -->
+  <div id="modaleForm" class="modale cache">
+    <div class="contenu-modale">
+      <h2>Nouvel utilisateur</h2>
+      <form id="formUtilisateur">
+                <label>Nom
+                <input type="text" name="nom" required>
+                </label> <br>
+                <br>
+                <label>Prenom
+                <input type="text" name="prenom" required>
+                </label> <br>
+                <br>
+                <label>Genre:
+
+                   <label><input type="radio" name="genre" value="Homme" required> Homme</label>
+                    <label><input type="radio" name="genre" value="Femme" required> Femme</label>
+                </label>
+                
+                <br>
+                <br>
+                <br>
+                    <label>Date de Naissance
+                        <input type="date" name="dateNaissance"  required> 
+                    </label> <br>
+                        <br>
+                     <label>Lieu de Naissance
+                <input type="text" name="lieuNaissance" required>
+                </label> <br>
+                <br>
+               <label>Département de Naissance
+                <input type="text" name="departementNaissance" required>
+                </label> <br>
+               
+                <br>
+                    
+                    <p>Adresse:</p>
+                    <label>Numero de Rue
+                        <input type="number" name="numeroRue"  required >
+                    </label> <br>
+                    <br>
+                    <label>Libellé de Rue
+                        <input type="text" name="libelleRue"  required >
+                    </label> <br>
+                    <br>
+                    <label>Code Postal
+                        <input type="number" name="codePostal"  required >
+                    </label> <br>
+                    <br>
+                    <label>Ville
+                        <input type="text" name="ville" required >
+                    </label> <br>
+                    <br>
+                    <br>
+                   
+        <button type="submit">Enregistrer</button>
+        <button type="button" id="btnAnnuler">Annuler</button>
+      </form>
+      <p id="messageErreur" class="erreur"></p>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+  <!-- Modale confirmation suppression -->
+  <div id="modaleSuppr" class="modale cache">
+    <div class="contenu-modale">
+      <p>Confirmer la suppression de cet utilisateur ?</p>
+      <button id="btnConfirmerSuppr">Oui, supprimer</button>
+      <button id="btnAnnulerSuppr">Annuler</button>
+    </div>
+  </div>
+
+  <script src="tp-10-formulaire.js"></script>
+</body>
+</html>
